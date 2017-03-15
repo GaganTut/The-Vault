@@ -5,6 +5,7 @@ module.exports = function() {
   function setValue(key, value) {
     secretVault[key] = value;
   }
+
   function getValue(key) {
     if (secretVault[key] === undefined) {
       return null;
@@ -12,11 +13,10 @@ module.exports = function() {
       return secretVault[key];
     }
   }
-  var vaultOperations = {
+
+
+  return {
     setValue,
     getValue
   };
-
-
-  return vaultOperations;
 };
